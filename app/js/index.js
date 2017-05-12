@@ -6,6 +6,10 @@ import Weather from './components/Weather';
 import About from './components/About';
 import Examples from './components/Examples';
 
+// Load Foundation
+import 'style-loader!css-loader!foundation-sites/dist/css/foundation.min.css';
+$(document).foundation();
+
 const Root = () => {
   return (
     <Router history={hashHistory}>
