@@ -4,7 +4,7 @@ const About = function() {
   return (
     <div className="row">
       <div className="columns medium-8 small-centered">
-        <h1 className="text-center">About</h1>
+        <h3 className="text-center">About</h3>
         <p>This is a simple React weather app that leverages the OpenWeatherMap API along with a React app structure.  Here are a few links for resources:</p>
         <ol>
           <li><a href="https://facebook.github.io/react">React</a> - Javascript framework</li>

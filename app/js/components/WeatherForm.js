@@ -27,7 +27,7 @@ class WeatherForm extends React.Component {
 
     // Capitalize string from input form
     function capitalize(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
+      return str.replace(/\b\w/g, char => char.toUpperCase());
     }
 
     if(city.value.length > 0) {

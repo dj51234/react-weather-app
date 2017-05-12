@@ -17,7 +17,7 @@ class Weather extends React.Component {
 
     function renderMessage() {
         if(isLoading) {
-          return <h3 className="text-center">Grabbing weather data...</h3>
+          return <h4 className="text-center">Grabbing weather data...</h4>
         } else if (temp && city) {
           return <WeatherMessage city={city} temp={temp}/>;
         }
