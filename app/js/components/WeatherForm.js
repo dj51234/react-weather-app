@@ -7,9 +7,17 @@ class WeatherForm extends React.Component {
   }
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <input ref='city' type="text" placeholder="Enter City Name"/>
-        <button>Get Weather</button>
+      <form onSubmit={this.onFormSubmit} className="input-group">
+        <div className="row">
+          <div className="columns large-9">
+            <input ref='city' type="text" placeholder="Enter City Name" className="input-group-field"/>
+          </div>
+          <div className="columns large-3">
+            <div className="input-group-button">
+              <button className="button hollow expanded">Get Weather</button>
+            </div>
+          </div>
+        </div>
       </form>
     )
   }

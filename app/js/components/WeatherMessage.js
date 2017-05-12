@@ -4,7 +4,7 @@ class WeatherMessage extends React.Component {
   render() {
     const { city, temp} = this.props;
     return (
-      <h3>It is {this.props.temp} degrees in {this.props.city}!</h3>
+      <h4 className="text-center">It is {this.props.temp} degrees in {this.props.city}!</h4>
     )
   }
 }

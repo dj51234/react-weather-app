@@ -17,16 +17,18 @@ class Weather extends React.Component {
 
     function renderMessage() {
         if(isLoading) {
-          return <h3>Grabbing weather data...</h3>
+          return <h3 className="text-center">Grabbing weather data...</h3>
         } else if (temp && city) {
           return <WeatherMessage city={city} temp={temp}/>;
         }
     }
     return (
-      <div>
-        <h1>Get Weather</h1>
-        <WeatherForm onSearch={this.onSearch}/>
-        {renderMessage()}
+      <div className="row">
+        <div className="columns medium-8 small-centered">
+          <h3 className="text-center">Get Weather</h3>
+          <WeatherForm onSearch={this.onSearch}/>
+          {renderMessage()}
+        </div>
       </div>
     )
   } //  End Render
