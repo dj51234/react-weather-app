@@ -3,9 +3,15 @@ const reload = require('reload');
 
 // Create App
 const app = express();
+const port = process.env.PORT || '3000';
+
+app.use(function(req, res, next) {
+  if (req.headers['x-forwarded-proto'] === 'http') next();
+  else res.redirect('http://' + req.hostname + req.url)
+});
 
 app.use(express.static('public'));
 
-app.listen('3000', function() {
-  console.log('Running on localhost:3000');
+app.listen(port, function() {
+  console.log('Running on ' + port);
 });
