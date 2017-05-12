@@ -1,9 +1,12 @@
 import React from 'react';
 
-class Examples extends React.Component {
-  render() {
-    return <h3>Examples</h3>
-  }
+const Examples = function() {
+  return (
+    <div>
+      <h3>Examples</h3>
+      <p>This is the examples section!</p>
+    </div>
+  )
 }
 
 export default Examples;
