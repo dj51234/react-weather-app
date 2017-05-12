@@ -1,7 +1,6 @@
 import React from 'react';
 import WeatherForm from './WeatherForm';
 import WeatherMessage from './WeatherMessage';
-import openWeatherMap from '../../api/openWeatherMap';
 
 class Weather extends React.Component {
   constructor() {
