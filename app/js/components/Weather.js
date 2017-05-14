@@ -35,7 +35,7 @@ class Weather extends React.Component {
     return (
       <div className="row">
         <div className="columns medium-8 small-centered">
-          <h3 className="text-center">Get Weather</h3>
+          <h3 className="text-center main-title">Get Weather</h3>
           <WeatherForm onSearch={this.onSearch}/>
           {renderMessage()}
           {renderErrorMessage()}

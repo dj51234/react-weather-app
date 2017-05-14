@@ -7,8 +7,10 @@ import About from './components/About';
 import Examples from './components/Examples';
 
 // Load Foundation
-import 'style-loader!css-loader!foundation-sites/dist/css/foundation.min.css';
+import 'foundation-sites/dist/css/foundation.min.css';
 $(document).foundation();
+// Load styles
+import '../styles/main.css';
 
 const Root = () => {
   return (
