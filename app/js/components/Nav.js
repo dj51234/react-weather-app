@@ -2,6 +2,10 @@ import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
 class Nav extends React.Component {
+  constructor() {
+    super();
+    this.onSearch = this.onSearch.bind(this);
+  }
   render() {
     return (
       <div className="top-bar">
@@ -13,20 +17,15 @@ class Nav extends React.Component {
             <li><Link to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Examples</Link></li>
           </ul>
         </div>
-        <div className="top-bar-right">
-          <form onSubmit={this.onSearch}>
-            <ul className="menu">
-              <li><input type="search" placeholder="Enter city name"/></li>
-              <li><button type="button" className="button">Search</button></li>
-            </ul>
-          </form>
-        </div>
       </div>
     )
   } // End Render
   onSearch(e) {
     e.preventDefault();
-    console.log('Success');
+    const { navInput } = this.refs;
+    const encodedInput = encodeURI(navInput.value);
+    navInput.value = '';
+    window.location.hash = `#/?location=${encodedInput}`;;
   }
 }
 

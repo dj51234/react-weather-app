@@ -10,7 +10,7 @@ import Examples from './components/Examples';
 import 'foundation-sites/dist/css/foundation.min.css';
 $(document).foundation();
 // Load styles
-import '../styles/main.css';
+import '../styles/main.scss';
 
 const Root = () => {
   return (
