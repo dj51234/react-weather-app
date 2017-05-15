@@ -1,9 +1,16 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
 
 class Modal extends React.Component {
   render() {
-    const { title, message } = this.props;
     return (
+      <div></div>
+    )
+  }
+  componentDidMount() {
+    const { title, message } = this.props;
+    const modalContent = (
       <div className="reveal tiny text-center" id="error-modal" data-reveal="">
         <h4>{title}</h4>
         <p className="lead">{message}</p>
@@ -11,9 +18,9 @@ class Modal extends React.Component {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    )
-  }
-  componentDidMount() {
+    );
+    const $modal = $(ReactDOMServer.renderToString(modalContent));
+    $(ReactDOM.findDOMNode(this)).html($modal);
     const modal = new Foundation.Reveal($('#error-modal'));
     modal.open();
   }
